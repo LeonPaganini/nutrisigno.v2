@@ -49,7 +49,8 @@ services:
           property: host
 
 databases:
-  - name: nutrisigno-db
-    databaseName: nutrisigno
-    plan: starter
+  - name: nutrisignov2-db
+    databaseName: nutrisignoV2
+    plan: free
+    region: oregon
     ipAllowList: []
