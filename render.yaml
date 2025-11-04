@@ -50,7 +50,7 @@ services:
 
 databases:
   - name: nutrisignov2-db
-    databaseName: nutrisignoV2
+    databaseName: nutrisignovii
     plan: free
     region: oregon
     ipAllowList: []
