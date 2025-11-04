@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+pydantic
+sqlalchemy
+alembic
+psycopg[binary]>=3.1
+python-dotenv
+reportlab
+pillow
+plotly
+streamlit
+httpx
