@@ -1,0 +1,21 @@
+{
+  "kcal": 1100,
+  "meals": [
+    {
+      "time": "07:00",
+      "items": [
+        {"category": 1, "name": "Ovo cozido", "grams": 50},
+        {"category": 3, "name": "Pão integral", "grams": 30},
+        {"category": 7, "name": "Maçã", "grams": 80}
+      ]
+    },
+    {
+      "time": "12:00",
+      "items": [
+        {"category": 1, "name": "Peito de frango", "grams": 120},
+        {"category": 6, "name": "Brócolis", "grams": 100},
+        {"category": 3, "name": "Arroz integral", "grams": 80}
+      ]
+    }
+  ]
+}

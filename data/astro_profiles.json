@@ -1,0 +1,14 @@
+{
+  "aries": {"elemento": "fogo", "traits": ["iniciativo", "impulsivo"]},
+  "touro": {"elemento": "terra", "traits": ["prático", "persistente"]},
+  "gemeos": {"elemento": "ar", "traits": ["versátil", "comunicativo"]},
+  "cancer": {"elemento": "agua", "traits": ["sensível", "protetor"]},
+  "leao": {"elemento": "fogo", "traits": ["confiante", "generoso"]},
+  "virgem": {"elemento": "terra", "traits": ["detalhista", "analítico"]},
+  "libra": {"elemento": "ar", "traits": ["harmonioso", "sociável"]},
+  "escorpiao": {"elemento": "agua", "traits": ["intenso", "perceptivo"]},
+  "sagitario": {"elemento": "fogo", "traits": ["aventureiro", "otimista"]},
+  "capricornio": {"elemento": "terra", "traits": ["ambicioso", "disciplinado"]},
+  "aquario": {"elemento": "ar", "traits": ["inovador", "humanitário"]},
+  "peixes": {"elemento": "agua", "traits": ["intuitivo", "empático"]}
+}

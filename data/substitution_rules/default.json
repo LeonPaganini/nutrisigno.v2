@@ -1,0 +1,14 @@
+{
+  "1": [
+    {"name": "Peito de frango", "grams": 120},
+    {"name": "Filé de peixe", "grams": 100}
+  ],
+  "3": [
+    {"name": "Arroz integral", "grams": 80},
+    {"name": "Quinoa", "grams": 70}
+  ],
+  "6": [
+    {"name": "Brócolis", "grams": 100},
+    {"name": "Espinafre", "grams": 100}
+  ]
+}
