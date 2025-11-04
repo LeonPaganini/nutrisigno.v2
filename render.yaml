@@ -1,0 +1,57 @@
+services:
+  - type: web
+    name: nutrisigno-backend
+    env: python
+    plan: starter
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn backend.app:app --host 0.0.0.0 --port $PORT"
+    # Se você já tiver migrações Alembic, troque o startCommand por:
+    # startCommand: "alembic upgrade head && uvicorn backend.app:app --host 0.0.0.0 --port $PORT"
+    healthCheckPath: "/admin/metrics"
+    autoDeploy: true
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: SESSION_COOKIE_NAME
+        value: "nutrisigno_session"
+      - key: AGNOS_BASE_URL
+        value: "https://SEU-ENDPOINT-AGNOS"
+      - key: AGNOS_API_KEY
+        sync: false
+      - key: FRONTEND_ORIGIN
+        fromService:
+          name: nutrisigno-frontend
+          type: web
+          property: url
+      - key: BACKEND_BASE_URL
+        # URL pública do próprio backend — útil pro frontend falar com ele localmente também
+        fromService:
+          name: nutrisigno-backend
+          type: web
+          property: url
+      - key: MP_WEBHOOK_SECRET
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: nutrisigno-db
+          property: connectionString
+
+  - type: web
+    name: nutrisigno-frontend
+    env: python
+    plan: starter
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "streamlit run frontend/main.py --server.address 0.0.0.0 --server.port $PORT"
+    autoDeploy: true
+    envVars:
+      - key: BACKEND_BASE_URL
+        fromService:
+          name: nutrisigno-backend
+          type: web
+          property: url
+
+databases:
+  - name: nutrisigno-db
+    databaseName: nutrisigno
+    plan: starter
+    ipAllowList: []  # libera apenas dentro do Render
