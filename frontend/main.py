@@ -46,7 +46,7 @@ def render_login() -> None:
             resp = api_login(email, dob)
             st.session_state.session = resp.get("session")
             st.success("Logado com sucesso (stub)")
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.error("Preencha email e data de nascimento.")
 
