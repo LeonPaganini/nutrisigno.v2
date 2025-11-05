@@ -12,7 +12,7 @@ client.
 import json
 import streamlit as st
 
-from .services.api_client import (
+from frontend.services.api_client import (
     login as api_login,
     submit_answers,
     request_report,
