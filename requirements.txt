@@ -10,3 +10,5 @@ pillow
 plotly
 streamlit
 httpx
+pydantic[email]
+email-validator
